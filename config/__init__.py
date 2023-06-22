@@ -3,7 +3,7 @@ import configargparse
 parser = configargparse.get_argument_parser(
     default_config_files=['config/defaults.ini'],
     description='Aloha NCR/POS Date Corrections - '
-                'Source: http://sckgit.fastinc.com/QPM/aloha-ncr-pos/tree/master',
+                'Source: <url>',
     formatter_class=configargparse.ArgumentDefaultsHelpFormatter
 )
 
@@ -29,6 +29,6 @@ parser.add_argument('--protocol', env_var='PROTOCOL', type=str, required=False,
                     default='http', help='The protocol with which to send requests.')
 
 parser.add_argument('--uri', env_var='URI', type=str, required=False,
-                    default='/instore/posXml', help='URI path to expose.')
+                    default='/some/url', help='URI path to expose.')
 
 cfg = parser.parse_known_args()[0]
